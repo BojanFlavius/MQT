@@ -1,0 +1,5 @@
+Fișierul JSON descrie o serie de cereri HTTP pentru interacționarea cu un cluster Kafka folosind Kafka REST Proxy. Acesta conține cereri pentru a obține înregistrări de la un consumator Kafka, a abona consumatorul la un subiect, a crea un consumator Kafka, 
+a obține lista de subiecte dintr-un cluster Kafka, a produce înregistrări într-un subiect Kafka și a obține lista de clustere Kafka.
+
+Acest fișier JSON poate fi importat în Postman pentru a executa aceste cereri și a comunica cu clusterul Kafka. 
+Utilizând aceste cereri, puteți să trimiteți, să consumați și să gestionați înregistrări în clusterul Kafka cu ușurință.

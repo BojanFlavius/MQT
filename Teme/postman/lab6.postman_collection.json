@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "d114b778-b7ff-4632-8164-de9f6964e647",
+		"name": "lab6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30680093"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8082/consumers/HappyGroup/instances/FirstConsumer/records",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.kafka.v2+json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/vnd.kafka.json.v2+json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8082/consumers/HappyGroup/instances/FirstConsumer/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"consumers",
+						"HappyGroup",
+						"instances",
+						"FirstConsumer",
+						"records"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/consumers/HappyGroup/instances/FirstConsumer/subscription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.kafka.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"topics\": [\"nume\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/consumers/HappyGroup/instances/FirstConsumer/subscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"consumers",
+						"HappyGroup",
+						"instances",
+						"FirstConsumer",
+						"subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/consumers/HappyGroup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/vnd.kafka.v2+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"FirstConsumer\",\r\n    \"format\": \"json\",\r\n    \"auto.offset.reset\": \"earliest\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/consumers/HappyGroup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"consumers",
+						"HappyGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/v3/clusters/{{cluster}}/topics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/v3/clusters/{{cluster}}/topics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v3",
+						"clusters",
+						"{{cluster}}",
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/v3/clusters/{{cluster}}/topics/nume/records",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"key\": { \"type\": \"JSON\", \"data\": \"key1\" },\r\n    \"value\": { \"type\": \"JSON\", \"data\": \"value1 Buna\" }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/v3/clusters/{{cluster}}/topics/nume/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v3",
+						"clusters",
+						"{{cluster}}",
+						"topics",
+						"nume",
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/v3/clusters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/v3/clusters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v3",
+						"clusters"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
